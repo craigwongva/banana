@@ -26,6 +26,8 @@
                         <addClasspath>false</addClasspath>
                     </manifest>
                     <manifestEntries>
+                        <Baby-Name>Emma</Baby-Name>
+                        <Baby-Age>${baby.age}</Baby-Age>
                         <Build-Time>${maven.build.timestamp}</Build-Time>
                         <Build-Host>${agent.name}</Build-Host>
                         <Build-User>${user.name}</Build-User>
