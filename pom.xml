@@ -17,31 +17,29 @@
   </dependencies>
 <build>
     <plugins>
-<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-assembly-plugin</artifactId>
-    <version>2.4</version>
-    <configuration>
-        <archive>
-            <manifest>
-                <addClasspath>true</addClasspath>
-            </manifest>
-            <manifestEntries>
-                <Build-Time>${maven.build.timestamp}</Build-Time>
-            </manifestEntries>
-            <manifestSections>
-                <manifestSection>
-                    <name>${build.manifest.section}</name>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>2.1.1</version>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <addClasspath>false</addClasspath>
+                    </manifest>
                     <manifestEntries>
-                        <Implementation-Title>${project.name}</Implementation-Title>
-                        <Implementation-Version>${project.version}</Implementation-Version>
-                        <Implementation-Build-Number>${build.number}</Implementation-Build-Number>
+                        <Build-Time>${maven.build.timestamp}</Build-Time>
+                        <Build-Host>${agent.name}</Build-Host>
+                        <Build-User>${user.name}</Build-User>
+                        <Build-Maven>Maven ${maven.version}</Build-Maven>
+                        <Build-Java>${java.version}</Build-Java>
+                        <Build-OS>${os.name}</Build-OS>
+                        <Build-Label>${project.version}</Build-Label>
+                        <Build-Path>${basedir}</Build-Path>
                     </manifestEntries>
-                </manifestSection>
-            </manifestSections>
-        </archive>
-    </configuration>
-</plugin>
+                </archive>
+            </configuration>
+        </plugin>
    </plugins>
 </build>
 </project>
