@@ -36,6 +36,5 @@
   </configuration>
  </plugin>
    </plugins>
- <finalName>${[yourWarName].war.finalName}</finalName>
 </build>
 </project>
