@@ -1,1 +1,8 @@
-
+node {
+  git url: 'https://github.com/craigwongva/pz-gateway.git'
+  def mvnHome = tool 'M3'
+  println "hi ku"
+  println mvnHome
+  println "bye ku"
+  sh "${mvnHome}/bin/mvn -B verify"
+}
