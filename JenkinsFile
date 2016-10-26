@@ -4,5 +4,5 @@ node {
   println "hi ku"
   println mvnHome
   println "bye ku"
-  //sh "${mvnHome}/bin/mvn -B verify"
+  sh "${mvnHome}/bin/mvn -B verify"
 }
