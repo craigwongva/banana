@@ -1,3 +1,5 @@
 node {
- println "hi craig"
+ println "hi craig1"
+ git url: 'https://github.com/craigwongva/pz-gateway.git'
+ println "hi craig2"
 }
