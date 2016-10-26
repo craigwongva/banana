@@ -1,5 +1,6 @@
 node {
  println "hi craig1"
- git url: 'https://github.com/craigwongva/pz-gateway.git'
+ //git url: 'https://github.com/craigwongva/pz-gateway.git'
+ //def mvnHome = tool "M3" 
  println "hi craig2"
 }
