@@ -1,5 +1,5 @@
 applications:
-- name: bann
+- name: bannh
   path: target/banana-1.0-SNAPSHOT.jar
   buildpack: java_buildpack_offline
   memory: 510M
